@@ -25,3 +25,5 @@ Este projeto é o front-end do **Sistema de Agendamento** desenvolvido para uma 
 
 2 Abra o index.html no navegador.
 
+![Descrição da imagem](caminho/da/imagem.png)
+
