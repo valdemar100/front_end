@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="adm.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h2>Dashboard</h2>
+      <p>Bem-vindo(a), <strong>Valdemar</strong></p>
+      <div class="dash-buttons">
+        <a href="agendamento.html" class="btn-small">Agendar</a>
+        <a href="index.html" class="btn-small">Sair</a>
+      </div>
+    </div>
+    <div class="chart-container">
+      <canvas id="statusChart"></canvas>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Login</th>
+            <th>Nome</th>
+            <th>Status</th>
+            <th>Serviço</th>
+            <th>Agendamento</th>
+            <th>Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td><td>mateus</td><td>Mateus Oliveira</td><td>Pendente</td>
+            <td>Montagem</td><td>2025-06-10 14:00</td><td><button class="btn-small btn-delete">X</button></td>
+          </tr>
+          <tr>
+            <td>2</td><td>guilherme</td><td>Guilherme Costa</td><td>Confirmado</td>
+            <td>Instalação</td><td>2025-06-11 09:00</td><td><button class="btn-small btn-delete">X</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    const ctx = document.getElementById('statusChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Pendente', 'Confirmado', 'Finalizado'],
+        datasets: [{
+          data: [5, 8, 3],          
+          backgroundColor: ['#FFCE56', '#36A2EB', '#66BB6A']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' },
+          title: {
+            display: true,
+            text: 'Status dos Agendamentos'
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

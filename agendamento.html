@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendamento</title>
+  <link rel="stylesheet" href="adm.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Agendamento</h2>
+    </div>
+
+    <form name="frmAgendamento" action="#" class="form-cadastro">
+      <div class="form-group">
+        <label for="nome">1 Nome:</label>
+        <input
+          id="nome"
+          type="text"
+          name="nome"
+          placeholder="Digite o seu nome"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">2 Telefone:</label>
+        <input
+          id="telefone"
+          type="text"
+          name="telefone"
+          placeholder="Digite o seu telefone"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="servico">3 Serviço:</label>
+        <input
+          id="servico"
+          type="text"
+          name="servico"
+          placeholder="Digite o serviço"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dataHora">4 Data e Hora:</label>
+        <input
+          id="dataHora"
+          type="datetime-local"
+          name="dataHora"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn-submit">Agendar</button>
+    </form>
+  </div>
+
+</body>
+</html>
